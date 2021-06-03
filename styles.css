@@ -1,0 +1,104 @@
+/* Master Styles */
+
+/*TODO: ACTIVE NAV LINK>?????????????????? Look at Github from Jordan Hudgens */
+
+/* body margin set to 0px to allow portfolio items to fill the width of the page */
+body { 
+    margin: 0px;
+}
+
+/* CSS grid used for Container alignment layout, template columns are set to 1 fractional unit */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+
+
+/* Nav styles: .nav-wrapper is the parent div. CSS flex styles is applied to nav-wrapper which is inhereted by children */ 
+
+ .nav-wrapper {
+      display: flex; 
+      /* defines alignment along the main axis, distributes extra space by space between items */
+      justify-content: space-between;
+      padding: 38px;
+ }
+
+ /* Applies flex context to parent container and to all its children  */
+ .left-side {
+     display: flex;
+ }
+
+ /* starts with nav-wrapper parent class, goes to left side and places styles on those children divs */ 
+ .nav-wrapper > .left-side > div {
+   margin-right: 20px;
+   font-size: 0.9rem;
+   text-transform: uppercase;
+}
+
+/*Styling the border, includes color and animations */
+.nav-link-wrapper { 
+    height: 22px;
+    border-bottom: 1px solid transparent;
+    transition: border-bottom 0.5s;
+}
+
+/*Styling the links that are contained in the border; includes color and animations*/
+.nav-link-wrapper a {
+    color: #8a8a8a;
+    text-decoration:none; 
+    transition: color 0.5s;
+}
+
+/* Changes styling of border bottom when hovering occurs  */
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid black; 
+}
+
+
+/* Hover styling for link inside div */
+.nav-link-wrapper a:hover{
+    color: black;
+}
+
+/* Portfolio Styles */
+/* styles contained portfolio items in grid format, 3 columns */
+.portfolio-items-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Positions contained item (image) relative to grid cell */
+.portfolio-item-wrapper {
+    position: relative; 
+}
+
+/*formats background image in individual grid cells, height and width. Background position and size 
+specified to format images such that their different sizes are redefined to make grid more cohesive*/
+.portfolio-img-background {
+    height: 350px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Defines styling parameters of logo images inside cell pictures  */
+.img-text-wrapper {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    text-align: center;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* */
+.logo-wrapper img {
+    width: 50%;
+    margin-bottom: 20px;
+}
