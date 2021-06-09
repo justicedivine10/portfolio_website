@@ -43,6 +43,12 @@ body {
     transition: border-bottom 0.5s;
 }
 
+.active-nav-link {
+    border-bottom: 1px solid black;
+}
+
+
+
 /*Styling the links that are contained in the border; includes color and animations*/
 .nav-link-wrapper a {
     color: #8a8a8a;
@@ -83,7 +89,9 @@ specified to format images such that their different sizes are redefined to make
     background-repeat: no-repeat;
 }
 
-/* Defines styling parameters of logo images inside cell pictures  */
+/* Defines styling parameters of logo images inside cell pictures. Image text wrappers positioned at very top
+styled using flex box, left to right top to bottom (flex direction, justify content), text inside will be centered
+image and text will appear in alignment with background image.   */
 .img-text-wrapper {
     position: absolute;
     top: 0;
@@ -97,8 +105,26 @@ specified to format images such that their different sizes are redefined to make
     padding-right: 100px;
 }
 
-/* */
+/* Style logo images, (size of logo images)  */
 .logo-wrapper img {
-    width: 50%;
+    width: 45%;
     margin-bottom: 20px;
+}
+
+.img-text-wrapper .subtitle {
+    transition: 1s; 
+    font-weight: 800;
+    color: transparent;
+}
+
+
+/*Should be more specific with selector, will only change when hovered */
+.img-text-wrapper:hover .subtitle {
+    font-weight: 800;
+    color: whitesmoke;
+}
+
+.image-blur {
+    transition: 1s;
+    filter: brightness(50%);
 }

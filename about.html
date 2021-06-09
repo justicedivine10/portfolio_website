@@ -1,12 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
+    <!--heading of home page (index.html)-->
 <head>
+    <!--specifying character set -->
     <meta charset="utf-8" />
      <title> About Me </title>
+     <!--linking to css style sheet for styling (styles.css) -->
+     <link rel="stylesheet" href="styles.css">
 </head>
+<!--Body of the index page-->
 <body>
-    <!--<h2> starts new line, used in this case to format placeholder-->
-    <h2> About Me Coming Soon !</h2>
- 
-</body>
+    <!---container is the parent class of child items which will make up the grid alignment layout-->
+    <div class="container">
+        <!--nav-wrapper is the parent div-->
+        <div class="nav-wrapper">
+            <div class="left-side">
+                <div class="nav-link-wrapper">
+                
+                    <!--reference to the homepage (index.html)-->
+                    <a href="index.html">Home</a>
+                </div>
+
+                <div class="nav-link-wrapper active-nav-link">
+                    <!--reference to the about page-->
+                    <a href="about.html">About</a>
+                </div>
+            </div>
+
+
+            <div class="right-side">
+                <div class="brand"> 
+
+                    <!--My name which will appear in its own section, child of "brand"-->
+                    <div>JUSTICE HARRISON
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+    
+    <!--closing div from above first div class-->
+       
+    <!-- contains everything below the navbar -->
+        <div class="content-wrapper">
+            <div class="two-column-wrapper">
+                <div class="profile-image-wrapper">
+                    <img src="images/my_photo.JPG">
+
+
+
+                </div>
+                
+                
+            </div>
+        </div>
+     
+    </div>          
+</body> 
 </html>
